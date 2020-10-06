@@ -3,20 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C54D74E6BC22D8F1FE8B950 /* Pods_ForReal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C9083672CFE7532B8013D7 /* Pods_ForReal.framework */; };
 		E163E01D24628B6000877D07 /* ForRealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163E01C24628B6000877D07 /* ForRealTests.swift */; };
 		E163E02824628B6000877D07 /* ForRealUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163E02724628B6000877D07 /* ForRealUITests.swift */; };
 		E163E03824628B6800877D07 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E163E03724628B6800877D07 /* HealthKit.framework */; };
-		E163E03F24628BD300877D07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E163E03924628BD300877D07 /* Assets.xcassets */; };
 		E163E04124628BD300877D07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163E03B24628BD300877D07 /* SceneDelegate.swift */; };
 		E163E04324628BD300877D07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163E03E24628BD300877D07 /* AppDelegate.swift */; };
 		E163E04B24628C2C00877D07 /* Date+ToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163E04A24628C2C00877D07 /* Date+ToString.swift */; };
 		E163E04E24628C7000877D07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E163E04C24628C7000877D07 /* Main.storyboard */; };
 		E163E05124628C8C00877D07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E163E04F24628C8C00877D07 /* LaunchScreen.storyboard */; };
 		E163E05324628E0300877D07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163E05224628E0300877D07 /* ViewController.swift */; };
+		E1EC56EA252BAAD0001D9639 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1EC56E9252BAACF001D9639 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		625F3AB438658134BE085812 /* Pods-ForReal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForReal.release.xcconfig"; path = "Target Support Files/Pods-ForReal/Pods-ForReal.release.xcconfig"; sourceTree = "<group>"; };
+		B0C9083672CFE7532B8013D7 /* Pods_ForReal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForReal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0564FF6BC8F4FBB4F8739FA /* Pods-ForReal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForReal.debug.xcconfig"; path = "Target Support Files/Pods-ForReal/Pods-ForReal.debug.xcconfig"; sourceTree = "<group>"; };
 		E163E00224628B5F00877D07 /* ForReal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForReal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E163E01324628B5F00877D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E163E01824628B6000877D07 /* ForRealTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForRealTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,14 +51,14 @@
 		E163E02924628B6000877D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E163E03524628B6800877D07 /* ForReal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForReal.entitlements; sourceTree = "<group>"; };
 		E163E03724628B6800877D07 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		E163E03924628BD300877D07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../ThisIsTheOne/ThisIsTheOne/Assets.xcassets; sourceTree = "<group>"; };
 		E163E03B24628BD300877D07 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../ThisIsTheOne/ThisIsTheOne/SceneDelegate.swift; sourceTree = "<group>"; };
-		E163E03D24628BD300877D07 /* ThisIsTheOne.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = ThisIsTheOne.entitlements; path = ../../ThisIsTheOne/ThisIsTheOne/ThisIsTheOne.entitlements; sourceTree = "<group>"; };
+		E163E03D24628BD300877D07 /* ThisIsTheOne.entitlements.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = ThisIsTheOne.entitlements.entitlements; path = ../../ThisIsTheOne/ThisIsTheOne/ThisIsTheOne.entitlements.entitlements; sourceTree = "<group>"; };
 		E163E03E24628BD300877D07 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../ThisIsTheOne/ThisIsTheOne/AppDelegate.swift; sourceTree = "<group>"; };
 		E163E04A24628C2C00877D07 /* Date+ToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+ToString.swift"; path = "../../StepToIt-master/New Group/Date+ToString.swift"; sourceTree = "<group>"; };
 		E163E04D24628C7000877D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../StepToIt-master/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		E163E05024628C8C00877D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../StepToIt-master/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		E163E05224628E0300877D07 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../StepToIt-master/ViewController.swift"; sourceTree = "<group>"; };
+		E1EC56E9252BAACF001D9639 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E163E03824628B6800877D07 /* HealthKit.framework in Frameworks */,
+				7C54D74E6BC22D8F1FE8B950 /* Pods_ForReal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DD159F0F5453AC6E1B37A18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0564FF6BC8F4FBB4F8739FA /* Pods-ForReal.debug.xcconfig */,
+				625F3AB438658134BE085812 /* Pods-ForReal.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E163DFF924628B5F00877D07 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +105,7 @@
 				E163E02624628B6000877D07 /* ForRealUITests */,
 				E163E00324628B5F00877D07 /* Products */,
 				E163E03624628B6800877D07 /* Frameworks */,
+				3DD159F0F5453AC6E1B37A18 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,13 +124,13 @@
 			children = (
 				E163E03524628B6800877D07 /* ForReal.entitlements */,
 				E163E03E24628BD300877D07 /* AppDelegate.swift */,
-				E163E03924628BD300877D07 /* Assets.xcassets */,
 				E163E03B24628BD300877D07 /* SceneDelegate.swift */,
 				E163E04F24628C8C00877D07 /* LaunchScreen.storyboard */,
 				E163E04C24628C7000877D07 /* Main.storyboard */,
 				E163E04A24628C2C00877D07 /* Date+ToString.swift */,
-				E163E03D24628BD300877D07 /* ThisIsTheOne.entitlements */,
+				E163E03D24628BD300877D07 /* ThisIsTheOne.entitlements.entitlements */,
 				E163E05224628E0300877D07 /* ViewController.swift */,
+				E1EC56E9252BAACF001D9639 /* GoogleService-Info.plist */,
 				E163E01324628B5F00877D07 /* Info.plist */,
 			);
 			path = ForReal;
@@ -143,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				E163E03724628B6800877D07 /* HealthKit.framework */,
+				B0C9083672CFE7532B8013D7 /* Pods_ForReal.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -154,9 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E163E02C24628B6000877D07 /* Build configuration list for PBXNativeTarget "ForReal" */;
 			buildPhases = (
+				5EF4B9BDE26D97A002259E39 /* [CP] Check Pods Manifest.lock */,
 				E163DFFE24628B5F00877D07 /* Sources */,
 				E163DFFF24628B5F00877D07 /* Frameworks */,
 				E163E00024628B5F00877D07 /* Resources */,
+				A92694D165693B79B5C1CAED /* [CP] Embed Pods Frameworks */,
+				78DD7B43A539D003E82FABBC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,7 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E163E05124628C8C00877D07 /* LaunchScreen.storyboard in Resources */,
-				E163E03F24628BD300877D07 /* Assets.xcassets in Resources */,
+				E1EC56EA252BAAD0001D9639 /* GoogleService-Info.plist in Resources */,
 				E163E04E24628C7000877D07 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +292,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EF4B9BDE26D97A002259E39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ForReal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78DD7B43A539D003E82FABBC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ForReal/Pods-ForReal-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ForReal/Pods-ForReal-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ForReal/Pods-ForReal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A92694D165693B79B5C1CAED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ForReal/Pods-ForReal-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ForReal/Pods-ForReal-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ForReal/Pods-ForReal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E163DFFE24628B5F00877D07 /* Sources */ = {
@@ -453,6 +531,7 @@
 		};
 		E163E02D24628B6000877D07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0564FF6BC8F4FBB4F8739FA /* Pods-ForReal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -474,6 +553,7 @@
 		};
 		E163E02E24628B6000877D07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 625F3AB438658134BE085812 /* Pods-ForReal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

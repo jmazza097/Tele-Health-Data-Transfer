@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7C54D74E6BC22D8F1FE8B950 /* Pods_ForReal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C9083672CFE7532B8013D7 /* Pods_ForReal.framework */; };
+		E1142691252EB6AF00B83B84 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1142690252EB6AF00B83B84 /* LoginViewController.swift */; };
 		E163E01D24628B6000877D07 /* ForRealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163E01C24628B6000877D07 /* ForRealTests.swift */; };
 		E163E02824628B6000877D07 /* ForRealUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163E02724628B6000877D07 /* ForRealUITests.swift */; };
 		E163E03824628B6800877D07 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E163E03724628B6800877D07 /* HealthKit.framework */; };
@@ -41,6 +42,7 @@
 		625F3AB438658134BE085812 /* Pods-ForReal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForReal.release.xcconfig"; path = "Target Support Files/Pods-ForReal/Pods-ForReal.release.xcconfig"; sourceTree = "<group>"; };
 		B0C9083672CFE7532B8013D7 /* Pods_ForReal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForReal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0564FF6BC8F4FBB4F8739FA /* Pods-ForReal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForReal.debug.xcconfig"; path = "Target Support Files/Pods-ForReal/Pods-ForReal.debug.xcconfig"; sourceTree = "<group>"; };
+		E1142690252EB6AF00B83B84 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E163E00224628B5F00877D07 /* ForReal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForReal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E163E01324628B5F00877D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E163E01824628B6000877D07 /* ForRealTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForRealTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 				E163E04A24628C2C00877D07 /* Date+ToString.swift */,
 				E163E03D24628BD300877D07 /* ThisIsTheOne.entitlements.entitlements */,
 				E163E05224628E0300877D07 /* ViewController.swift */,
+				E1142690252EB6AF00B83B84 /* LoginViewController.swift */,
 				E1EC56E9252BAACF001D9639 /* GoogleService-Info.plist */,
 				E163E01324628B5F00877D07 /* Info.plist */,
 			);
@@ -360,6 +363,7 @@
 				E163E04324628BD300877D07 /* AppDelegate.swift in Sources */,
 				E163E04B24628C2C00877D07 /* Date+ToString.swift in Sources */,
 				E163E05324628E0300877D07 /* ViewController.swift in Sources */,
+				E1142691252EB6AF00B83B84 /* LoginViewController.swift in Sources */,
 				E163E04124628BD300877D07 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

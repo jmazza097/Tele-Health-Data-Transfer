@@ -405,7 +405,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 let mailComposerVC = MFMailComposeViewController()
                 mailComposerVC.mailComposeDelegate = self
                 
-                mailComposerVC.setToRecipients(["andrew@seemuapps.com"])
+                mailComposerVC.setToRecipients(["jmazza097@gmail.com"])
                 mailComposerVC.setSubject("Hello")
                 mailComposerVC.setMessageBody("How are you doing?", isHTML: false)
                 

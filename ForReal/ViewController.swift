@@ -4,8 +4,9 @@ import UIKit
 import HealthKit
 import Foundation
 import FirebaseUI
+import MessageUI
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var stepsLabel: UILabel!
     @IBOutlet weak var monthPicker: UIPickerView!
@@ -390,44 +391,40 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 50
     }
+
+    @IBAction func sendEmail(_ sender: Any) {
+        let mailComposeViewController = configureMailController()
+                if MFMailComposeViewController.canSendMail() {
+                    self.present(mailComposeViewController, animated: true, completion: nil)
+                } else {
+                    showMailError()
+                }
+            }
+            
+            func configureMailController() -> MFMailComposeViewController {
+                let mailComposerVC = MFMailComposeViewController()
+                mailComposerVC.mailComposeDelegate = self
+                
+                mailComposerVC.setToRecipients(["jmazza097@gmail.com"])
+                mailComposerVC.setSubject("Hello")
+                mailComposerVC.setMessageBody("How are you doing?", isHTML: false)
+                
+                return mailComposerVC
+            }
+            
+            func showMailError() {
+                let sendMailErrorAlert = UIAlertController(title: "Could not send email", message: "Your device could not send email", preferredStyle: .alert)
+                let dismiss = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                sendMailErrorAlert.addAction(dismiss)
+                self.present(sendMailErrorAlert, animated: true, completion: nil)
+            }
+            
+            func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+                controller.dismiss(animated: true, completion: nil)
+            }
     
     
-    @IBAction func loginTapped(_ sender: Any) {
-    //Get Default auth UI
-        let authUI = FUIAuth.defaultAuthUI()
 
-        // Check that it isn't nil
-        guard authUI != nil else {
-            return
-        }
-
-        //set Delegate
-        authUI?.delegate = (self as FUIAuthDelegate)
-        authUI?.providers = [FUIEmailAuth()]
-
-        //Get reference to auth UI
-        let authViewController = authUI!.authViewController()
-        present(authViewController, animated: true, completion: nil)
-    }
 
 } // end of class ViewController
 
-//class loginViewController: UIViewController {
-//
-//override func viewDidLoad() {
-//    super.viewDidLoad()
-//}
-
-
-
-extension ViewController: FUIAuthDelegate {
-
-func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
-
-    // Check for error
-    guard error == nil else {
-        return
-        }
-
-    }
-}

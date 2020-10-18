@@ -32,6 +32,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             return components.year!
         }
         
+        
         func getSelectedDate(year: Int, month: Int, day: Int) -> Date {
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy/MM/dd"
@@ -103,6 +104,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     } // end of func handlePermissions
     
+    var steps = ""
     
     func displaySteps() {
         
@@ -138,9 +140,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 }
                 
                 self.stepsLabel.text = String(stepCount)
+                self.steps = stepCount
                 
             }
+            
         }
+        
         
     } // end of func displaySteps
     
@@ -406,8 +411,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 mailComposerVC.mailComposeDelegate = self
                 
                 mailComposerVC.setToRecipients(["jmazza097@gmail.com"])
-                mailComposerVC.setSubject("Hello")
-                mailComposerVC.setMessageBody("How are you doing?", isHTML: false)
+                mailComposerVC.setSubject("Test Data")
+                mailComposerVC.setMessageBody("You have walked \(steps) steps today" , isHTML: false)
                 
                 return mailComposerVC
             }

@@ -8,6 +8,7 @@ target 'ForReal' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'FirebaseUI'
+  pod 'Charts'
 
 end
 

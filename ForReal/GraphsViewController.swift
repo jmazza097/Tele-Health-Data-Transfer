@@ -7,6 +7,37 @@
 //
 
 import UIKit
+import Charts
+
+class GraphsViewController: UIViewController, ChartViewDelegate{
+    
+    var PieChart = PieChartView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        PieChart.delegate = self
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        PieChart.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        PieChart.center = view.center
+        view.addSubview(PieChart)
+        
+        var entries = [ChartDataEntry]()
+        
+        
+        entries.append(ChartDataEntry(x: 20, y: 30))
+        entries.append(ChartDataEntry(x: 40, y: 50))
+        
+        let set = PieChartDataSet(entries: entries)
+        set.colors = ChartColorTemplates.liberty()
+        let data = PieChartData(dataSet: set)
+        PieChart.data = data
+    }
+    
+    
+}
 
 
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7C54D74E6BC22D8F1FE8B950 /* Pods_ForReal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C9083672CFE7532B8013D7 /* Pods_ForReal.framework */; };
 		E102F8AD2541058C00F5FB8E /* GraphsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102F8AC2541058C00F5FB8E /* GraphsViewController.swift */; };
+		E102F95025486DAB00F5FB8E /* CalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102F94F25486DAB00F5FB8E /* CalculationViewController.swift */; };
 		E1142691252EB6AF00B83B84 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1142690252EB6AF00B83B84 /* LoginViewController.swift */; };
 		E13F272D2534AD94005DC374 /* SAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F272C2534AD94005DC374 /* SAButton.swift */; };
 		E163E01D24628B6000877D07 /* ForRealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163E01C24628B6000877D07 /* ForRealTests.swift */; };
@@ -45,6 +46,7 @@
 		794B7B69CBAE2C4B48A6BB95 /* Pods-ForReal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForReal.release.xcconfig"; path = "Target Support Files/Pods-ForReal/Pods-ForReal.release.xcconfig"; sourceTree = "<group>"; };
 		B0C9083672CFE7532B8013D7 /* Pods_ForReal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForReal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E102F8AC2541058C00F5FB8E /* GraphsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsViewController.swift; sourceTree = "<group>"; };
+		E102F94F25486DAB00F5FB8E /* CalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewController.swift; sourceTree = "<group>"; };
 		E1142690252EB6AF00B83B84 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E13F272C2534AD94005DC374 /* SAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAButton.swift; sourceTree = "<group>"; };
 		E163E00224628B5F00877D07 /* ForReal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForReal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +129,7 @@
 				E163E05224628E0300877D07 /* ViewController.swift */,
 				E1142690252EB6AF00B83B84 /* LoginViewController.swift */,
 				E102F8AC2541058C00F5FB8E /* GraphsViewController.swift */,
+				E102F94F25486DAB00F5FB8E /* CalculationViewController.swift */,
 				E163E01324628B5F00877D07 /* Info.plist */,
 				E18C3E1225350595007F16C9 /* GoogleService-Info.plist */,
 				E13F272C2534AD94005DC374 /* SAButton.swift */,
@@ -364,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E102F95025486DAB00F5FB8E /* CalculationViewController.swift in Sources */,
 				E163E04324628BD300877D07 /* AppDelegate.swift in Sources */,
 				E13F272D2534AD94005DC374 /* SAButton.swift in Sources */,
 				E163E04B24628C2C00877D07 /* Date+ToString.swift in Sources */,
@@ -547,6 +551,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ForReal/ForReal.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HU3PYYHUU;
 				INFOPLIST_FILE = ForReal/Info.plist;
@@ -568,6 +573,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ForReal/ForReal.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HU3PYYHUU;
 				INFOPLIST_FILE = ForReal/Info.plist;

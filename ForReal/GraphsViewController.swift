@@ -18,6 +18,8 @@ class GraphsViewController: UIViewController, ChartViewDelegate{
         PieChart.delegate = self
     }
     
+    
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         PieChart.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)

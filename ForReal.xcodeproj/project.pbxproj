@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		7C54D74E6BC22D8F1FE8B950 /* Pods_ForReal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C9083672CFE7532B8013D7 /* Pods_ForReal.framework */; };
 		E1142691252EB6AF00B83B84 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1142690252EB6AF00B83B84 /* LoginViewController.swift */; };
-		E1388659254B50880029BB3A /* CalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1388658254B50880029BB3A /* CalculationViewController.swift */; };
-		E138868C254B7CC00029BB3A /* graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E138868B254B7CC00029BB3A /* graph.swift */; };
 		E1388694254CA9DE0029BB3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1388693254CA9DE0029BB3A /* Images.xcassets */; };
 		E13F272D2534AD94005DC374 /* SAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F272C2534AD94005DC374 /* SAButton.swift */; };
 		E163E01D24628B6000877D07 /* ForRealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163E01C24628B6000877D07 /* ForRealTests.swift */; };
@@ -47,8 +45,6 @@
 		794B7B69CBAE2C4B48A6BB95 /* Pods-ForReal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForReal.release.xcconfig"; path = "Target Support Files/Pods-ForReal/Pods-ForReal.release.xcconfig"; sourceTree = "<group>"; };
 		B0C9083672CFE7532B8013D7 /* Pods_ForReal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForReal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1142690252EB6AF00B83B84 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		E1388658254B50880029BB3A /* CalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewController.swift; sourceTree = "<group>"; };
-		E138868B254B7CC00029BB3A /* graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = graph.swift; sourceTree = "<group>"; };
 		E1388693254CA9DE0029BB3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E13F272C2534AD94005DC374 /* SAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAButton.swift; sourceTree = "<group>"; };
 		E163E00224628B5F00877D07 /* ForReal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForReal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +62,7 @@
 		E163E04A24628C2C00877D07 /* Date+ToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+ToString.swift"; path = "../../StepToIt-master/New Group/Date+ToString.swift"; sourceTree = "<group>"; };
 		E163E04D24628C7000877D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../StepToIt-master/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		E163E05024628C8C00877D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../StepToIt-master/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
-		E163E05224628E0300877D07 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../StepToIt-master/ViewController.swift"; sourceTree = "<group>"; };
+		E163E05224628E0300877D07 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E18C3E1225350595007F16C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,11 +126,9 @@
 				E163E04A24628C2C00877D07 /* Date+ToString.swift */,
 				E163E05224628E0300877D07 /* ViewController.swift */,
 				E1142690252EB6AF00B83B84 /* LoginViewController.swift */,
-				E1388658254B50880029BB3A /* CalculationViewController.swift */,
 				E163E01324628B5F00877D07 /* Info.plist */,
 				E18C3E1225350595007F16C9 /* GoogleService-Info.plist */,
 				E13F272C2534AD94005DC374 /* SAButton.swift */,
-				E138868B254B7CC00029BB3A /* graph.swift */,
 				E1388693254CA9DE0029BB3A /* Images.xcassets */,
 			);
 			path = ForReal;
@@ -371,8 +365,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E138868C254B7CC00029BB3A /* graph.swift in Sources */,
-				E1388659254B50880029BB3A /* CalculationViewController.swift in Sources */,
 				E163E04324628BD300877D07 /* AppDelegate.swift in Sources */,
 				E13F272D2534AD94005DC374 /* SAButton.swift in Sources */,
 				E163E04B24628C2C00877D07 /* Date+ToString.swift in Sources */,

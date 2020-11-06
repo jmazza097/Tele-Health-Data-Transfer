@@ -5,9 +5,19 @@ import HealthKit
 import Foundation
 import FirebaseUI
 import MessageUI
+import Charts
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,MFMailComposeViewControllerDelegate {
+
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, MFMailComposeViewControllerDelegate {
     
+    var weightString:String = "0.0"
+    var weight:Double = 0.0
+    var calEaten:String = "0.0"
+    var numCalIntake:Double = 0.0
+    var caloriesBurned:Double = 0.0
+    var BMR:Double = 0.0
+    
+    @IBOutlet weak var heartRateLabel: UILabel!
     @IBOutlet weak var stepsLabel: UILabel!
     @IBOutlet weak var monthPicker: UIPickerView!
     @IBOutlet weak var dayPicker: UIPickerView!
@@ -63,12 +73,28 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var selectedDay: Int = 0
     
     override func viewDidLoad() {
+
+        
+        weightString = weightLabel.text ?? "0.0"
+        weight = Double(weightString) ?? 0.0
+        calEaten = calIntake.text ?? "0.0"
+        numCalIntake = Double(calEaten) ?? 0.0
+        caloriesBurned = 0.0
+        BMR = 0.0
+
+        
+        //perform(#selector(advance), with:nil, afterDelay: 0)
+        
+        weightLabel.delegate = self // keyboard will be dismissed
+        calIntake.delegate = self // keyboard will be dismissed
+        
         super.viewDidLoad()
         initializeDateArrays()
         
         // Check to see if the app already has permissions
         if (appIsAuthorized()) {
             displaySteps()
+            displayHeartRate()
         } // end if
         
         else {
@@ -79,7 +105,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         adjustLabelText()
     } // end of function viewDidLoad
 
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     } // end of method didReceiveMemoryWarning
@@ -88,7 +113,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func handlePermissions() {
         
         // Access Step Count
-        let healthKitTypes: Set = [ HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)! ]
+        let healthKitTypes: Set = [ HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!, HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!]
         
         // Check Authorization
         healthStore.requestAuthorization(toShare: healthKitTypes, read: healthKitTypes) { (bool, error) in
@@ -97,6 +122,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 
                 // Authorization Successful
                 self.displaySteps()
+                self.displayHeartRate()
                 
             } // end if
             
@@ -104,7 +130,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     } // end of func handlePermissions
     
-    var steps = ""
+    var steps:Double = 0.0
+    var heartRate:Double = 0.0
     
     func displaySteps() {
         
@@ -140,7 +167,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 }
                 
                 self.stepsLabel.text = String(stepCount)
-                self.steps = stepCount
+                self.steps = result
                 
             }
             
@@ -148,6 +175,24 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         
     } // end of func displaySteps
+    
+    
+    func displayHeartRate() {
+        
+        getHeartRate{ (result) in
+            DispatchQueue.main.async {
+                
+                let heartRate = String(Int(result))
+                
+                self.heartRateLabel.text = String(heartRate)
+                self.heartRate = result
+                
+            }
+            
+        }
+        
+        
+    }
     
     
     func getSteps(completion: @escaping (Double) -> Void) {
@@ -206,9 +251,53 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     } // end of func getSteps
     
+    func getHeartRate(completion: @escaping (Double) -> Void) {
+        
+        let calendar = Calendar.current
+        
+        let heartRateType = HKQuantityType.quantityType(forIdentifier: .heartRate)!
+        
+        let selectedDate = dateHelper.getSelectedDate(year: selectedYear, month: selectedMonth, day: selectedDay)
+        
+        let startOfSelectedDate = Calendar.current.startOfDay(for: selectedDate)
+        
+        let endOfSelectedDate = Calendar.current.date(byAdding: .day, value: 1, to: startOfSelectedDate)
+        
+        let predicate = HKQuery.predicateForSamples(withStart: startOfSelectedDate, end: endOfSelectedDate, options: [])
+        
+        let anchorDate = calendar.date(bySettingHour: 0, minute: 0, second: 0, of: selectedDate)!
+
+        var interval = DateComponents()
+        interval.day = 1
+        
+        let query = HKStatisticsCollectionQuery(quantityType: heartRateType,
+                                                quantitySamplePredicate: predicate,
+                                                options: .discreteAverage,
+                                                anchorDate: anchorDate,
+                                                intervalComponents: interval)
+        query.initialResultsHandler = { query, results, error in
+                guard let statsCollection = results else { return }
+
+                for statistics in statsCollection.statistics() {
+                    guard let quantity = statistics.averageQuantity() else { continue }
+
+                    let beatsPerMinuteUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
+                    let value = quantity.doubleValue(for: beatsPerMinuteUnit)
+
+                    let df = DateFormatter()
+                    df.dateStyle = .medium
+                    df.timeStyle = .none
+                    completion(value)
+                }
+            }
+
+            HKHealthStore().execute(query)
+        }
+        
+    
     
     func appIsAuthorized() -> Bool {
-        if (self.healthStore.authorizationStatus(for: HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!) == .sharingAuthorized) {
+        if (self.healthStore.authorizationStatus(for: HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!) == .sharingAuthorized && self.healthStore.authorizationStatus(for: HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!) == .sharingAuthorized) {
             return true
         }
         else {
@@ -370,6 +459,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         selectedDay = dayArray[self.dayPicker.selectedRow(inComponent: 0)]
         displaySteps()
+        displayHeartRate()
     }
     
     // Font Size
@@ -396,8 +486,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 50
     }
+    
 
     @IBAction func sendEmail(_ sender: Any) {
+        weightString = weightLabel.text ?? "0.0"
+        weight = Double(weightString) ?? 0.0
+        calEaten = calIntake.text ?? "0.0"
+        numCalIntake = Double(calEaten) ?? 0.0
+        caloriesBurned = 0.0
+        caloriesBurned = steps * 0.05
         let mailComposeViewController = configureMailController()
                 if MFMailComposeViewController.canSendMail() {
                     self.present(mailComposeViewController, animated: true, completion: nil)
@@ -407,12 +504,30 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
             
             func configureMailController() -> MFMailComposeViewController {
+                weightString = weightLabel.text ?? "0.0"
+                weight = Double(weightString) ?? 0.0
+                calEaten = calIntake.text ?? "0.0"
+                numCalIntake = Double(calEaten) ?? 0.0
+                caloriesBurned = 0.0
+                BMR = 0.0
+                caloriesBurned = steps * 0.05
+                BMR = weight * 11 * 0.95
+                
+                //Getfirst name for subject
+                var name:String = ""
+                let user = Auth.auth().currentUser
+                if let user = user {
+                    let Disname = user.displayName
+                    name = Disname ?? ""
+                }
+
+                
                 let mailComposerVC = MFMailComposeViewController()
                 mailComposerVC.mailComposeDelegate = self
                 
                 mailComposerVC.setToRecipients(["jmazza097@gmail.com"])
-                mailComposerVC.setSubject("Test Data")
-                mailComposerVC.setMessageBody("You have walked \(steps) steps today" , isHTML: false)
+                mailComposerVC.setSubject(" \(name)'s Health data for \(selectedMonth) / \(selectedDay) / \(selectedYear)")
+                mailComposerVC.setMessageBody(" Steps: \(steps) \n Calories Burned: \(caloriesBurned) \n Basal Metabolic Rate \(BMR) \n Calorie Intake: \(numCalIntake) \n Patient Weighs \(weight)" , isHTML: false)
                 
                 return mailComposerVC
             }
@@ -429,7 +544,144 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
     
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        caloriesBurned = steps * 0.05
+        BMR = weight * 11 * 0.95
+        if let segueId = segue.identifier{
+            switch segueId{
+            case "toGraph":
+                if let destination = segue.destination as? graph{
+                    destination.caloriesBurned = caloriesBurned
+                    destination.steps = steps
+                    destination.calorieIntake = numCalIntake
+                    destination.BMR = BMR
+                }
+            case "toCalc":
+                if let destination = segue.destination as? CalculationViewController{
+                    destination.caloriesBurned = caloriesBurned
+                    destination.steps = steps
+                    destination.calorieIntake = numCalIntake
+                    destination.weight = weight
+                    destination.BMR = BMR
+                }
+            default:
+                //nothing to do
+                break
+            }
+        }
+    }
+    
+    @IBOutlet weak var weightLabel: UITextField!
+    
+    @IBOutlet weak var calIntake: UITextField!
+    
+    @IBAction func didTapGraph(_ sender: Any) {
+        weightString = weightLabel.text ?? "0.0"
+        weight = Double(weightString) ?? 0.0
+        calEaten = calIntake.text ?? "0.0"
+        numCalIntake = Double(calEaten) ?? 0.0
+        caloriesBurned = 0.0
+        BMR = 0.0
+    }
+    
+    @IBAction func didTapCalc(_ sender: Any) {
+        weightString = weightLabel.text ?? "0.0"
+        weight = Double(weightString) ?? 0.0
+        calEaten = calIntake.text ?? "0.0"
+        numCalIntake = Double(calEaten) ?? 0.0
+        caloriesBurned = 0.0
+        BMR = 0.0
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        weightLabel.resignFirstResponder()
+        calIntake.resignFirstResponder()
+        return true
+    }
+    
 
 } // end of class ViewController
+
+
+//graph view controller
+class graph: UIViewController, ChartViewDelegate{
+    
+    var caloriesBurned:Double = 0.0
+    var calorieIntake:Double = 0.0
+    var steps:Double = 0.0
+    var BMR:Double = 0.0
+    
+
+    var PieChart = PieChartView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        PieChart.delegate = self
+    }
+    
+    var textGraph = ""
+    lazy var doubleGraph = Double(textGraph)
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        PieChart.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        PieChart.center = view.center
+        view.addSubview(PieChart)
+        
+        var entries = [ChartDataEntry]()
+        
+        //entries.append(ChartDataEntry(x: 20, y: steps))
+        entries.append(ChartDataEntry(x: 60, y: calorieIntake))
+        entries.append(ChartDataEntry(x: 40, y: caloriesBurned))
+        entries.append(ChartDataEntry(x: 80, y: BMR))
+        
+        let chartDataSet = PieChartDataSet(entries: entries, label: "Caloric Intake, Calories Burned, BMR")
+        
+        //let set = PieChartDataSet(entries: entries)
+        chartDataSet.colors = ChartColorTemplates.material()
+        let data = PieChartData(dataSet: chartDataSet)
+        PieChart.data = data
+    }
+    
+    
+}
+class CalculationViewController: UIViewController {
+    var caloriesBurned = 0.0
+    var calorieIntake = 0.0
+    var steps = 0.0
+    var weight:Double = 0.0
+    var BMR:Double = 0.0
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        calBurned.text = String(caloriesBurned)
+        BMRLabel.text = String(BMR)
+        warnings()
+
+        // Do any additional setup after loading the view.
+    }
+    func warnings(){
+        if steps<1000.0 {
+            stepWarning.text = "Try Walking More!"
+        }
+        if calorieIntake<800.0 {
+            calWarning.text = "Try Eating More!"
+        }
+    }
+
+    @IBOutlet weak var calBurned: UILabel!
+    
+    @IBOutlet weak var BMRLabel: UILabel!
+    
+    @IBOutlet weak var stepWarning: UILabel!
+    // @IBOutlet weak var stepWarning: UILabel!
+    
+    @IBOutlet weak var calWarning: UILabel!
+    //@IBOutlet weak var calWarning: UILabel!
+    
+}
+
+
 

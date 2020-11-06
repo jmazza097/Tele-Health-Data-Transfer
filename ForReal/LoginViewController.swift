@@ -17,7 +17,6 @@ class LoginViewController: UIViewController{
         super.viewDidLoad()
     }
 
-    
     @IBAction func loginTap(_ sender: UIButton) {
         //Get Default auth UI
             let authUI = FUIAuth.defaultAuthUI()

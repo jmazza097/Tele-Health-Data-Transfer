@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C54D74E6BC22D8F1FE8B950 /* Pods_ForReal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C9083672CFE7532B8013D7 /* Pods_ForReal.framework */; };
+		14C1D3716E0ACC66712CD057 /* Pods_Tele_Health_Data_Transfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B78E718B54C0DF2E7E8019 /* Pods_Tele_Health_Data_Transfer.framework */; };
 		E1142691252EB6AF00B83B84 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1142690252EB6AF00B83B84 /* LoginViewController.swift */; };
 		E1388694254CA9DE0029BB3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1388693254CA9DE0029BB3A /* Images.xcassets */; };
 		E13F272D2534AD94005DC374 /* SAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F272C2534AD94005DC374 /* SAButton.swift */; };
-		E163E01D24628B6000877D07 /* ForRealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163E01C24628B6000877D07 /* ForRealTests.swift */; };
-		E163E02824628B6000877D07 /* ForRealUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163E02724628B6000877D07 /* ForRealUITests.swift */; };
 		E163E03824628B6800877D07 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E163E03724628B6800877D07 /* HealthKit.framework */; };
 		E163E04124628BD300877D07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163E03B24628BD300877D07 /* SceneDelegate.swift */; };
 		E163E04324628BD300877D07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163E03E24628BD300877D07 /* AppDelegate.swift */; };
@@ -41,20 +39,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		380BD3F4FBBB9AD69CD78B45 /* Pods-ForReal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForReal.debug.xcconfig"; path = "Target Support Files/Pods-ForReal/Pods-ForReal.debug.xcconfig"; sourceTree = "<group>"; };
-		794B7B69CBAE2C4B48A6BB95 /* Pods-ForReal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForReal.release.xcconfig"; path = "Target Support Files/Pods-ForReal/Pods-ForReal.release.xcconfig"; sourceTree = "<group>"; };
-		B0C9083672CFE7532B8013D7 /* Pods_ForReal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForReal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		305900D2A30478A4E55C8F86 /* Pods-Tele-Health Data Transfer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tele-Health Data Transfer.release.xcconfig"; path = "Target Support Files/Pods-Tele-Health Data Transfer/Pods-Tele-Health Data Transfer.release.xcconfig"; sourceTree = "<group>"; };
+		30B78E718B54C0DF2E7E8019 /* Pods_Tele_Health_Data_Transfer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tele_Health_Data_Transfer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		704CA8CE8F4455AE17902092 /* Pods-Tele-Health Data Transfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tele-Health Data Transfer.debug.xcconfig"; path = "Target Support Files/Pods-Tele-Health Data Transfer/Pods-Tele-Health Data Transfer.debug.xcconfig"; sourceTree = "<group>"; };
 		E1142690252EB6AF00B83B84 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1388693254CA9DE0029BB3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E13F272C2534AD94005DC374 /* SAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAButton.swift; sourceTree = "<group>"; };
-		E163E00224628B5F00877D07 /* ForReal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForReal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E163E00224628B5F00877D07 /* Tele-Health Data Transfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tele-Health Data Transfer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E163E01324628B5F00877D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E163E01824628B6000877D07 /* ForRealTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForRealTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E163E01C24628B6000877D07 /* ForRealTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForRealTests.swift; sourceTree = "<group>"; };
-		E163E01E24628B6000877D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E163E02324628B6000877D07 /* ForRealUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForRealUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E163E02724628B6000877D07 /* ForRealUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForRealUITests.swift; sourceTree = "<group>"; };
-		E163E02924628B6000877D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E163E01824628B6000877D07 /* Tele-Health Data TransferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tele-Health Data TransferTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E163E02324628B6000877D07 /* Tele-Health Data TransferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tele-Health Data TransferUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E163E03524628B6800877D07 /* ForReal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForReal.entitlements; sourceTree = "<group>"; };
 		E163E03724628B6800877D07 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		E163E03B24628BD300877D07 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../ThisIsTheOne/ThisIsTheOne/SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E163E03824628B6800877D07 /* HealthKit.framework in Frameworks */,
-				7C54D74E6BC22D8F1FE8B950 /* Pods_ForReal.framework in Frameworks */,
+				14C1D3716E0ACC66712CD057 /* Pods_Tele_Health_Data_Transfer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,9 +90,7 @@
 		E163DFF924628B5F00877D07 = {
 			isa = PBXGroup;
 			children = (
-				E163E00424628B5F00877D07 /* ForReal */,
-				E163E01B24628B6000877D07 /* ForRealTests */,
-				E163E02624628B6000877D07 /* ForRealUITests */,
+				E163E00424628B5F00877D07 /* Tele-Health Data Transfer */,
 				E163E00324628B5F00877D07 /* Products */,
 				E163E03624628B6800877D07 /* Frameworks */,
 				E472C69D0DA76FBB48F4FD10 /* Pods */,
@@ -108,14 +100,14 @@
 		E163E00324628B5F00877D07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E163E00224628B5F00877D07 /* ForReal.app */,
-				E163E01824628B6000877D07 /* ForRealTests.xctest */,
-				E163E02324628B6000877D07 /* ForRealUITests.xctest */,
+				E163E00224628B5F00877D07 /* Tele-Health Data Transfer.app */,
+				E163E01824628B6000877D07 /* Tele-Health Data TransferTests.xctest */,
+				E163E02324628B6000877D07 /* Tele-Health Data TransferUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E163E00424628B5F00877D07 /* ForReal */ = {
+		E163E00424628B5F00877D07 /* Tele-Health Data Transfer */ = {
 			isa = PBXGroup;
 			children = (
 				E163E03524628B6800877D07 /* ForReal.entitlements */,
@@ -131,32 +123,14 @@
 				E13F272C2534AD94005DC374 /* SAButton.swift */,
 				E1388693254CA9DE0029BB3A /* Images.xcassets */,
 			);
-			path = ForReal;
-			sourceTree = "<group>";
-		};
-		E163E01B24628B6000877D07 /* ForRealTests */ = {
-			isa = PBXGroup;
-			children = (
-				E163E01C24628B6000877D07 /* ForRealTests.swift */,
-				E163E01E24628B6000877D07 /* Info.plist */,
-			);
-			path = ForRealTests;
-			sourceTree = "<group>";
-		};
-		E163E02624628B6000877D07 /* ForRealUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E163E02724628B6000877D07 /* ForRealUITests.swift */,
-				E163E02924628B6000877D07 /* Info.plist */,
-			);
-			path = ForRealUITests;
+			path = "Tele-Health Data Transfer";
 			sourceTree = "<group>";
 		};
 		E163E03624628B6800877D07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				E163E03724628B6800877D07 /* HealthKit.framework */,
-				B0C9083672CFE7532B8013D7 /* Pods_ForReal.framework */,
+				30B78E718B54C0DF2E7E8019 /* Pods_Tele_Health_Data_Transfer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -164,8 +138,8 @@
 		E472C69D0DA76FBB48F4FD10 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				380BD3F4FBBB9AD69CD78B45 /* Pods-ForReal.debug.xcconfig */,
-				794B7B69CBAE2C4B48A6BB95 /* Pods-ForReal.release.xcconfig */,
+				704CA8CE8F4455AE17902092 /* Pods-Tele-Health Data Transfer.debug.xcconfig */,
+				305900D2A30478A4E55C8F86 /* Pods-Tele-Health Data Transfer.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -173,29 +147,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E163E00124628B5F00877D07 /* ForReal */ = {
+		E163E00124628B5F00877D07 /* Tele-Health Data Transfer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E163E02C24628B6000877D07 /* Build configuration list for PBXNativeTarget "ForReal" */;
+			buildConfigurationList = E163E02C24628B6000877D07 /* Build configuration list for PBXNativeTarget "Tele-Health Data Transfer" */;
 			buildPhases = (
-				5EF4B9BDE26D97A002259E39 /* [CP] Check Pods Manifest.lock */,
+				B68FAEBF4974ED5C34CF61FB /* [CP] Check Pods Manifest.lock */,
 				E163DFFE24628B5F00877D07 /* Sources */,
 				E163DFFF24628B5F00877D07 /* Frameworks */,
 				E163E00024628B5F00877D07 /* Resources */,
-				A92694D165693B79B5C1CAED /* [CP] Embed Pods Frameworks */,
-				78DD7B43A539D003E82FABBC /* [CP] Copy Pods Resources */,
+				2121CBAA4F38F003F84A35F0 /* [CP] Embed Pods Frameworks */,
+				C97DC5398BC291A2C263A4A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ForReal;
+			name = "Tele-Health Data Transfer";
 			productName = ForReal;
-			productReference = E163E00224628B5F00877D07 /* ForReal.app */;
+			productReference = E163E00224628B5F00877D07 /* Tele-Health Data Transfer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E163E01724628B6000877D07 /* ForRealTests */ = {
+		E163E01724628B6000877D07 /* Tele-Health Data TransferTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E163E02F24628B6000877D07 /* Build configuration list for PBXNativeTarget "ForRealTests" */;
+			buildConfigurationList = E163E02F24628B6000877D07 /* Build configuration list for PBXNativeTarget "Tele-Health Data TransferTests" */;
 			buildPhases = (
 				E163E01424628B6000877D07 /* Sources */,
 				E163E01524628B6000877D07 /* Frameworks */,
@@ -206,14 +180,14 @@
 			dependencies = (
 				E163E01A24628B6000877D07 /* PBXTargetDependency */,
 			);
-			name = ForRealTests;
+			name = "Tele-Health Data TransferTests";
 			productName = ForRealTests;
-			productReference = E163E01824628B6000877D07 /* ForRealTests.xctest */;
+			productReference = E163E01824628B6000877D07 /* Tele-Health Data TransferTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E163E02224628B6000877D07 /* ForRealUITests */ = {
+		E163E02224628B6000877D07 /* Tele-Health Data TransferUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E163E03224628B6000877D07 /* Build configuration list for PBXNativeTarget "ForRealUITests" */;
+			buildConfigurationList = E163E03224628B6000877D07 /* Build configuration list for PBXNativeTarget "Tele-Health Data TransferUITests" */;
 			buildPhases = (
 				E163E01F24628B6000877D07 /* Sources */,
 				E163E02024628B6000877D07 /* Frameworks */,
@@ -224,9 +198,9 @@
 			dependencies = (
 				E163E02524628B6000877D07 /* PBXTargetDependency */,
 			);
-			name = ForRealUITests;
+			name = "Tele-Health Data TransferUITests";
 			productName = ForRealUITests;
-			productReference = E163E02324628B6000877D07 /* ForRealUITests.xctest */;
+			productReference = E163E02324628B6000877D07 /* Tele-Health Data TransferUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -253,7 +227,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E163DFFD24628B5F00877D07 /* Build configuration list for PBXProject "ForReal" */;
+			buildConfigurationList = E163DFFD24628B5F00877D07 /* Build configuration list for PBXProject "Tele-Health Data Transfer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -266,9 +240,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E163E00124628B5F00877D07 /* ForReal */,
-				E163E01724628B6000877D07 /* ForRealTests */,
-				E163E02224628B6000877D07 /* ForRealUITests */,
+				E163E00124628B5F00877D07 /* Tele-Health Data Transfer */,
+				E163E01724628B6000877D07 /* Tele-Health Data TransferTests */,
+				E163E02224628B6000877D07 /* Tele-Health Data TransferUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -302,7 +276,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5EF4B9BDE26D97A002259E39 /* [CP] Check Pods Manifest.lock */ = {
+		2121CBAA4F38F003F84A35F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tele-Health Data Transfer/Pods-Tele-Health Data Transfer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tele-Health Data Transfer/Pods-Tele-Health Data Transfer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tele-Health Data Transfer/Pods-Tele-Health Data Transfer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B68FAEBF4974ED5C34CF61FB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -317,45 +308,28 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ForReal-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Tele-Health Data Transfer-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		78DD7B43A539D003E82FABBC /* [CP] Copy Pods Resources */ = {
+		C97DC5398BC291A2C263A4A1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ForReal/Pods-ForReal-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Tele-Health Data Transfer/Pods-Tele-Health Data Transfer-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ForReal/Pods-ForReal-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Tele-Health Data Transfer/Pods-Tele-Health Data Transfer-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ForReal/Pods-ForReal-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A92694D165693B79B5C1CAED /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ForReal/Pods-ForReal-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ForReal/Pods-ForReal-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ForReal/Pods-ForReal-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tele-Health Data Transfer/Pods-Tele-Health Data Transfer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -378,7 +352,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E163E01D24628B6000877D07 /* ForRealTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +359,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E163E02824628B6000877D07 /* ForRealUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,12 +367,12 @@
 /* Begin PBXTargetDependency section */
 		E163E01A24628B6000877D07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E163E00124628B5F00877D07 /* ForReal */;
+			target = E163E00124628B5F00877D07 /* Tele-Health Data Transfer */;
 			targetProxy = E163E01924628B6000877D07 /* PBXContainerItemProxy */;
 		};
 		E163E02524628B6000877D07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E163E00124628B5F00877D07 /* ForReal */;
+			target = E163E00124628B5F00877D07 /* Tele-Health Data Transfer */;
 			targetProxy = E163E02424628B6000877D07 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -543,15 +515,15 @@
 		};
 		E163E02D24628B6000877D07 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 380BD3F4FBBB9AD69CD78B45 /* Pods-ForReal.debug.xcconfig */;
+			baseConfigurationReference = 704CA8CE8F4455AE17902092 /* Pods-Tele-Health Data Transfer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = ForReal/ForReal.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Tele-Health Data Transfer/ForReal.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HU3PYYHUU;
-				INFOPLIST_FILE = ForReal/Info.plist;
+				INFOPLIST_FILE = "Tele-Health Data Transfer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -566,15 +538,15 @@
 		};
 		E163E02E24628B6000877D07 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 794B7B69CBAE2C4B48A6BB95 /* Pods-ForReal.release.xcconfig */;
+			baseConfigurationReference = 305900D2A30478A4E55C8F86 /* Pods-Tele-Health Data Transfer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = ForReal/ForReal.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Tele-Health Data Transfer/ForReal.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HU3PYYHUU;
-				INFOPLIST_FILE = ForReal/Info.plist;
+				INFOPLIST_FILE = "Tele-Health Data Transfer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -604,7 +576,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ForReal.app/ForReal";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tele-Health Data Transfer.app/Tele-Health Data Transfer";
 			};
 			name = Debug;
 		};
@@ -626,7 +598,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ForReal.app/ForReal";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tele-Health Data Transfer.app/Tele-Health Data Transfer";
 			};
 			name = Release;
 		};
@@ -673,7 +645,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E163DFFD24628B5F00877D07 /* Build configuration list for PBXProject "ForReal" */ = {
+		E163DFFD24628B5F00877D07 /* Build configuration list for PBXProject "Tele-Health Data Transfer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E163E02A24628B6000877D07 /* Debug */,
@@ -682,7 +654,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E163E02C24628B6000877D07 /* Build configuration list for PBXNativeTarget "ForReal" */ = {
+		E163E02C24628B6000877D07 /* Build configuration list for PBXNativeTarget "Tele-Health Data Transfer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E163E02D24628B6000877D07 /* Debug */,
@@ -691,7 +663,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E163E02F24628B6000877D07 /* Build configuration list for PBXNativeTarget "ForRealTests" */ = {
+		E163E02F24628B6000877D07 /* Build configuration list for PBXNativeTarget "Tele-Health Data TransferTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E163E03024628B6000877D07 /* Debug */,
@@ -700,7 +672,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E163E03224628B6000877D07 /* Build configuration list for PBXNativeTarget "ForRealUITests" */ = {
+		E163E03224628B6000877D07 /* Build configuration list for PBXNativeTarget "Tele-Health Data TransferUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E163E03324628B6000877D07 /* Debug */,

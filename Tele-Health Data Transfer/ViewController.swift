@@ -512,6 +512,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 BMR = 0.0
                 caloriesBurned = steps * 0.05
                 BMR = weight * 11 * 0.95
+                let formattedHeartRate = Double(round(1000*heartRate)/1000)
+                let formattedCaloriesBurned = Double(round(1000*caloriesBurned)/1000)
+                let formattedBMR = Double(round(1000*BMR)/1000)
                 
                 //Getfirst name for subject
                 var name:String = ""
@@ -524,10 +527,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 
                 let mailComposerVC = MFMailComposeViewController()
                 mailComposerVC.mailComposeDelegate = self
+
                 
                 mailComposerVC.setToRecipients(["jmazza097@gmail.com"])
                 mailComposerVC.setSubject(" \(name)'s Health data for \(selectedMonth) / \(selectedDay) / \(selectedYear)")
-                mailComposerVC.setMessageBody(" Steps: \(steps) \n Calories Burned: \(caloriesBurned) \n Basal Metabolic Rate \(BMR) \n Calorie Intake: \(numCalIntake) \n Patient Weighs \(weight)" , isHTML: false)
+                mailComposerVC.setMessageBody("Average Heart Rate: \(formattedHeartRate) \n Steps: \(steps) \n Calories Burned: \(formattedCaloriesBurned) \n Basal Metabolic Rate \(formattedBMR) \n Calorie Intake: \(numCalIntake) \n Patient Weighs \(weight)" , isHTML: false)
                 
                 return mailComposerVC
             }
@@ -664,10 +668,10 @@ class CalculationViewController: UIViewController {
     }
     func warnings(){
         if steps<1000.0 {
-            stepWarning.text = "Try Walking More!"
+            stepWarning.text = "Not Enough Steps. Try Walking More!"
         }
         if calorieIntake<800.0 {
-            calWarning.text = "Try Eating More!"
+            calWarning.text = "Not Enough Calories. Try Eating More!"
         }
     }
 

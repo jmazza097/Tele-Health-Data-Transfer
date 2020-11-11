@@ -201,50 +201,24 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         let selectedDate = dateHelper.getSelectedDate(year: selectedYear, month: selectedMonth, day: selectedDay)
         
-        let startOfDay = Calendar.current.startOfDay(for: selectedDate)
+        let startOfSelectedDate = Calendar.current.startOfDay(for: selectedDate)
         
+        let endOfSelectedDate = Calendar.current.date(byAdding: .day, value: 1, to: startOfSelectedDate)
+        
+        let predicate = HKQuery.predicateForSamples(withStart: startOfSelectedDate, end: endOfSelectedDate, options: .strictStartDate)
+
         var interval = DateComponents()
         interval.day = 1
         
-        let query = HKStatisticsCollectionQuery(quantityType: stepsQuantityType,
-                                                quantitySamplePredicate: nil,
-                                                options: [.cumulativeSum],
-                                                anchorDate: startOfDay,
-                                                intervalComponents: interval)
-        query.initialResultsHandler = { _, result, error in
-            
-            var resultCount = -1.0
-            
-            guard let result = result else {
-                completion(resultCount)
+        let query = HKStatisticsQuery(quantityType: stepsQuantityType,
+                                                quantitySamplePredicate: predicate,
+                                                options: [.cumulativeSum]){ _, result, error in
+
+            guard let result = result, let sum = result.sumQuantity() else {
+                completion(-1.0)
                 return
             }
-            
-            result.enumerateStatistics(from: startOfDay, to: selectedDate) { statistics, _ in
-                if let sum = statistics.sumQuantity() {
-                    // Get steps (they are of double type)
-                    resultCount = sum.doubleValue(for: HKUnit.count())
-                }
-                
-                // Return
-                DispatchQueue.main.async {
-                    completion(resultCount)
-                }
-            }
-            
-        }
-        
-        query.statisticsUpdateHandler = {
-            query, statistics, statisticsCollection, error in
-            
-            // If new statistics are available
-            if let sum = statistics?.sumQuantity() {
-                let resultCount = sum.doubleValue(for: HKUnit.count())
-                DispatchQueue.main.async {
-                    completion(resultCount)
-                }
-            }
-            
+            completion(sum.doubleValue(for: HKUnit.count()))
         }
         
         healthStore.execute(query)

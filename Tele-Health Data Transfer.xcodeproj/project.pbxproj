@@ -14,10 +14,10 @@
 		E11E1AE0255BAAC000B1AD74 /* Date+ToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11E1ADF255BAABF00B1AD74 /* Date+ToString.swift */; };
 		E11E1B35255BB1ED00B1AD74 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E11E1B34255BB1ED00B1AD74 /* GoogleService-Info.plist */; };
 		E11E1B3A255BB31200B1AD74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11E1B39255BB31200B1AD74 /* AppDelegate.swift */; };
+		E11E1B42255BB5AE00B1AD74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11E1B41255BB5AE00B1AD74 /* SceneDelegate.swift */; };
 		E1388694254CA9DE0029BB3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1388693254CA9DE0029BB3A /* Images.xcassets */; };
 		E13F272D2534AD94005DC374 /* SAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F272C2534AD94005DC374 /* SAButton.swift */; };
 		E163E03824628B6800877D07 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E163E03724628B6800877D07 /* HealthKit.framework */; };
-		E163E04124628BD300877D07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163E03B24628BD300877D07 /* SceneDelegate.swift */; };
 		E163E05324628E0300877D07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E163E05224628E0300877D07 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +48,7 @@
 		E11E1ADF255BAABF00B1AD74 /* Date+ToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+ToString.swift"; sourceTree = "<group>"; };
 		E11E1B34255BB1ED00B1AD74 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E11E1B39255BB31200B1AD74 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E11E1B41255BB5AE00B1AD74 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E1388693254CA9DE0029BB3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E13F272C2534AD94005DC374 /* SAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAButton.swift; sourceTree = "<group>"; };
 		E163E00224628B5F00877D07 /* Tele-Health Data Transfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tele-Health Data Transfer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,7 +57,6 @@
 		E163E02324628B6000877D07 /* Tele-Health Data TransferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tele-Health Data TransferUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E163E03524628B6800877D07 /* ForReal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForReal.entitlements; sourceTree = "<group>"; };
 		E163E03724628B6800877D07 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		E163E03B24628BD300877D07 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../ThisIsTheOne/ThisIsTheOne/SceneDelegate.swift; sourceTree = "<group>"; };
 		E163E05224628E0300877D07 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,13 +110,13 @@
 		E163E00424628B5F00877D07 /* Tele-Health Data Transfer */ = {
 			isa = PBXGroup;
 			children = (
+				E11E1B41255BB5AE00B1AD74 /* SceneDelegate.swift */,
 				E11E1B34255BB1ED00B1AD74 /* GoogleService-Info.plist */,
 				E11E1ADF255BAABF00B1AD74 /* Date+ToString.swift */,
 				E11E1AD1255BA9EA00B1AD74 /* LaunchScreen.storyboard */,
 				E11E1ACB255BA9C100B1AD74 /* Main.storyboard */,
 				E163E03524628B6800877D07 /* ForReal.entitlements */,
 				E11E1B39255BB31200B1AD74 /* AppDelegate.swift */,
-				E163E03B24628BD300877D07 /* SceneDelegate.swift */,
 				E163E05224628E0300877D07 /* ViewController.swift */,
 				E1142690252EB6AF00B83B84 /* LoginViewController.swift */,
 				E163E01324628B5F00877D07 /* Info.plist */,
@@ -340,11 +340,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E13F272D2534AD94005DC374 /* SAButton.swift in Sources */,
+				E11E1B42255BB5AE00B1AD74 /* SceneDelegate.swift in Sources */,
 				E163E05324628E0300877D07 /* ViewController.swift in Sources */,
 				E11E1AE0255BAAC000B1AD74 /* Date+ToString.swift in Sources */,
 				E11E1B3A255BB31200B1AD74 /* AppDelegate.swift in Sources */,
 				E1142691252EB6AF00B83B84 /* LoginViewController.swift in Sources */,
-				E163E04124628BD300877D07 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,6 @@
+framework module Pods_Tele_Health_Data_Transfer {
+  umbrella header "Pods-Tele-Health Data Transfer-umbrella.h"
+
+  export *
+  module * { export * }
+}

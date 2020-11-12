@@ -219,6 +219,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 return
             }
             completion(sum.doubleValue(for: HKUnit.count()))
+            self.steps = sum.doubleValue(for: HKUnit.count())
         }
         
         healthStore.execute(query)
@@ -630,12 +631,15 @@ class CalculationViewController: UIViewController {
     var steps = 0.0
     var weight:Double = 0.0
     var BMR:Double = 0.0
+    
 
 
     override func viewDidLoad() {
+        let formattedCaloriesBurned = Double(round(1000*caloriesBurned)/1000)
+        let formattedBMR = Double(round(1000*BMR)/1000)
         super.viewDidLoad()
-        calBurned.text = String(caloriesBurned)
-        BMRLabel.text = String(BMR)
+        calBurned.text = String(formattedCaloriesBurned)
+        BMRLabel.text = String(formattedBMR)
         warnings()
 
         // Do any additional setup after loading the view.
